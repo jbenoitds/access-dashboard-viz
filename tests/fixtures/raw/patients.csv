@@ -1,0 +1,6 @@
+patient_id;birth_date;registered_provider_id;vulnerable;pregnant;area_id
+P1;1980-01-01;MD1;0;0;W
+P2;1990-01-01;MD1;0;0;E
+P3;1950-01-01;MD3;1;0;E
+P4;2000-01-01;;0;0;E
+P5;2001-01-01;MD2;0;0;NOWHERE

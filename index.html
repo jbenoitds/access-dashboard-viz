@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Primary Care Access Mapper</title>
+  <meta name="description" content="Interactive dashboard of primary care accessibility, wait times, continuity and equity across a health territory.">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">
+        <h1><span data-i18n="title">Primary Care Accessibility &amp; Health Equity Mapper</span><span class="badge" id="data-badge"></span></h1>
+        <p data-i18n="subtitle"></p>
+      </div>
+      <div class="filters" role="group" aria-label="Filters">
+        <label class="field"><span data-i18n="clinic">Clinic</span><select id="f-clinic"></select></label>
+        <label class="field"><span data-i18n="from">From</span><select id="f-from"></select></label>
+        <label class="field"><span data-i18n="to">To</span><select id="f-to"></select></label>
+        <div class="field"><span data-i18n="language">Language</span>
+          <div class="seg" id="f-lang">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="section-title" style="margin-top:0">
+      <h2 data-i18n="kpi_heading"></h2>
+      <p id="kpi-period"></p>
+    </div>
+    <section class="kpis" id="kpis" aria-live="polite"></section>
+
+    <div class="section-title"><h2 data-i18n="map_heading"></h2><p id="window-label"></p></div>
+    <section class="grid grid-map">
+      <div class="card">
+        <div class="card-head">
+          <div><h3 id="map-title"></h3><p id="map-unit"></p></div>
+          <div class="controls">
+            <label><span data-i18n="map_metric"></span><select id="map-metric"></select></label>
+            <label id="catchment-ctl"><span data-i18n="catchment"></span>
+              <input type="range" id="catchment" min="5" max="40" step="1" value="15" aria-describedby="catchment-val">
+              <span class="range-value" id="catchment-val">15 km</span></label>
+          </div>
+        </div>
+        <div class="map-wrap" id="map"></div>
+        <div class="legend" id="map-legend"></div>
+      </div>
+      <aside class="card profile" id="profile" aria-live="polite"></aside>
+    </section>
+
+    <div class="section-title"><h2 data-i18n="equity_heading"></h2><p data-i18n="equity_note"></p></div>
+    <section class="equity" id="equity"></section>
+
+    <section class="grid grid-2" style="margin-top:28px">
+      <div class="card">
+        <div class="card-head">
+          <div><h3 data-i18n="wait_heading"></h3><p data-i18n="wait_note"></p></div>
+          <div class="seg" id="wait-compare" role="group">
+            <button type="button" data-v="none" aria-pressed="true" data-i18n="compare_none"></button>
+            <button type="button" data-v="clinics" aria-pressed="false" data-i18n="compare_clinics"></button>
+            <button type="button" data-v="quintiles" aria-pressed="false" data-i18n="compare_quintiles"></button>
+          </div>
+        </div>
+        <div class="chart" id="wait-chart"></div>
+        <div class="legend" id="wait-legend"></div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div><h3 data-i18n="trend_heading"></h3><p id="trend-sub"></p></div>
+          <label class="controls"><span class="sr-only" data-i18n="indicator"></span><select id="trend-indicator"></select></label>
+        </div>
+        <div class="chart" id="trend-chart"></div>
+        <div class="legend" id="trend-legend"></div>
+      </div>
+    </section>
+
+    <div class="section-title"><h2 data-i18n="resources_heading"></h2><p id="ref-date"></p></div>
+    <section class="grid grid-2">
+      <div class="card">
+        <div class="card-head"><div><h3 id="ds-title"></h3><p data-i18n="ds_note"></p></div></div>
+        <div class="chart" id="ds-chart"></div>
+        <div class="legend" id="ds-legend"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><h3 data-i18n="mix_heading"></h3><p data-i18n="mix_note"></p></div></div>
+        <div class="chart" id="mix-chart"></div>
+        <div class="legend" id="mix-legend"></div>
+        <h3 style="margin:20px 0 6px;font-size:14px" data-i18n="capacity_heading"></h3>
+        <div class="table-scroll"><table class="data" id="capacity-table"></table></div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <details class="table-box" id="area-details">
+        <summary data-i18n="table_toggle"></summary>
+        <div class="table-scroll"><table class="data" id="area-table"></table></div>
+      </details>
+    </section>
+
+    <div class="section-title"><h2 data-i18n="methods_heading"></h2></div>
+    <section class="methods" id="methods"></section>
+  </main>
+  <footer><p data-i18n="footer"></p></footer>
+
+  <div class="tooltip" id="tooltip" role="status" aria-hidden="true"></div>
+
+  <script src="js/vendor/d3.v6.3.1.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/metrics.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/map.js"></script>
+  <script src="data/dashboard.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

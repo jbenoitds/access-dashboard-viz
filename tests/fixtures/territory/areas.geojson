@@ -1,0 +1,4 @@
+{"type":"FeatureCollection","name":"Fixture","features":[
+{"type":"Feature","properties":{"area_id":"W","name_en":"West","population":1000,"deprivation_quintile":1,"attachment_rate":0.9,"urban_class":"urban"},"geometry":{"type":"Polygon","coordinates":[[[-40.01,45.0],[-40.0,45.0],[-40.0,45.01],[-40.01,45.01],[-40.01,45.0]]]}},
+{"type":"Feature","properties":{"area_id":"E","name_en":"East","population":3000,"deprivation_quintile":5,"attachment_rate":0.7,"urban_class":"rural"},"geometry":{"type":"Polygon","coordinates":[[[-40.0,45.0],[-39.98,45.0],[-39.98,45.01],[-40.0,45.01],[-40.0,45.0]]]}}
+]}

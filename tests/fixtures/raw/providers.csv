@@ -1,0 +1,6 @@
+provider_id,clinic_id,provider_type
+MD1,C1,physician
+MD2,C1,Médecin
+RES1,C1,resident
+NUR1,C1,infirmière
+MD3,C2,physician

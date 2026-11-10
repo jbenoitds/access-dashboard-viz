@@ -1,0 +1,7 @@
+clinic_id,name_en,name_fr,kind,lon,lat,area_id
+GMF-A,GMF A · Downtown,GMF A · Centre-ville,GMF-U,-40.0436,45.42543,S01
+GMF-B,GMF B · East Central,GMF B · Centre-Est,GMF,-40.01289,45.40734,S06
+GMF-C,GMF C · North,GMF C · Nord,GMF,-40.03976,45.4815,S13
+GMF-D,GMF D · Southwest,GMF D · Sud-Ouest,GMF,-40.11655,45.38292,S12
+GMF-E,GMF E · East Village,GMF E · Village-Est,GMF,-39.81963,45.47426,S23
+GMF-F,GMF F · West Village,GMF F · Village-Ouest,GMF,-40.26757,45.34765,S21

@@ -1,0 +1,19 @@
+{
+  "name": "access-dashboard-viz",
+  "version": "1.0.0",
+  "description": "Interactive dashboard of primary care accessibility, wait times, continuity and health equity across a territory (vanilla JS + D3).",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "start": "node pipeline/serve.js",
+    "test": "node tests/run.js",
+    "test:browser": "node tests/browser-check.js",
+    "synth": "node pipeline/synth.js",
+    "engine": "node pipeline/run-engine.js",
+    "build-data": "node pipeline/build-data.js --from 2021-08-01 --to 2022-07-31",
+    "demo": "node pipeline/synth.js && node pipeline/run-engine.js && node pipeline/build-data.js --from 2021-08-01 --to 2022-07-31"
+  }
+}

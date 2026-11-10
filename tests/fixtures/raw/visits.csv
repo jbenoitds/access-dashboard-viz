@@ -1,0 +1,16 @@
+visit_id,patient_id,provider_id,booked_at,start,status,mode
+1,P1,MD1,2022-03-01 09:00,2022-03-03 10:00,completed,scheduled
+2,P1,MD2,,2022-03-07 09:00,completed,walk_in
+3,P1,RES1,2022-03-08 08:00,2022-03-15 10:00,completed,scheduled
+4,P2,MD1,2022-03-01 08:00,2022-03-11 10:00,completed,scheduled
+5,P2,NUR1,2022-03-02 08:00,2022-03-04 10:00,completed,scheduled
+6,P2,MD1,2022-03-10 08:00,2022-03-21 10:00,no_show,scheduled
+7,P3,MD3,2022-03-10 08:00,2022-03-14 10:00,completed,scheduled
+8,P3,MD1,,2022-03-22 10:00,completed,walk_in
+9,P4,MD2,,2022-04-23 10:00,completed,Sans RDV
+10,P4,MD3,,2022-04-24 10:00,completed,walk_in
+11,X9,MD1,,2022-04-24 11:00,completed,walk_in
+12,P1,MD1,2022-03-20 08:00,2022-03-25 10:00,cancelled_patient,scheduled
+13,P5,MD2,2022-04-01 08:00,2022-04-02 10:00,Patient non présenté,scheduled
+14,P5,MD2,2022-03-01 08:00,2022-04-30 10:00,completed,scheduled
+15,P1,MD1,2021-12-01 08:00,2022-05-31 10:00,completed,scheduled
