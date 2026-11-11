@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Interactive dashboard of primary care accessibility, wait times, continuity and health equity across a territory (vanilla JS + D3).",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "engines": {
     "node": ">=12"
   },
